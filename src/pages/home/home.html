@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle class="style-color">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title> Home </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="logout()" class="style-icon-close">   <!--boton para cerrar sesion-->
+        <ion-icon name="exit"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2 class="style-header"><strong><i>Welcome back, {{ user.details.name }}</i></strong></h2>
+
+  <p class="style-text"><i>
+    Selection of seats according to worker.
+  </i></p>
+  <p>
+    **************************************************************
+  </p>
+  <p>
+    <!--<button ion-button color="primary" menuToggle>Toggle Menu</button>-->
+  </p>
+</ion-content>

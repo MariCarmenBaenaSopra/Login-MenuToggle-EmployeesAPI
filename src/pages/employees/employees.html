@@ -1,0 +1,29 @@
+<!--
+  Generated template for the Employees page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle class="style-color">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Employees</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="home">
+  <ion-list>
+    <ion-item *ngFor="let employees of employee">
+      <ion-avatar item-left>
+        <img src="{{employees.picture.thumbnail}}">
+      </ion-avatar>
+      <h2>{{employees.name.first}} {{employees.name.last}}</h2>
+      <p>{{employees.email}}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>
