@@ -18,4 +18,8 @@ export class ItemDetailsPage {
   component() {
     this.navCtrl.setRoot(ComponentPage);
   }
+
+  seat() {
+    
+  }
 }

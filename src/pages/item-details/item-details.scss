@@ -11,4 +11,23 @@ page-item-details {
     margin-right: 11px;
     margin-top: 495px;
   }
+
+  .style-laptop {
+    background-color: white;
+    color: black;
+    font-size: 90px;
+    margin-left: 18px;
+  }
+
+  button {
+    border: 0;
+    font-family: inherit;
+    font-style: inherit;
+    font-variant: inherit;
+    line-height: 1;
+    text-transform: none;
+    cursor: pointer;
+    -webkit-appearance: button;
+    background-color: white;
+  }
 }

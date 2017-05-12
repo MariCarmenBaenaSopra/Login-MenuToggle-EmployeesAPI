@@ -2,32 +2,45 @@ import { EmployeesService } from './../../providers/employees-service';
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
-
-/*
-  Generated class for the Employees page.
-
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
   selector: 'page-employees',
   templateUrl: 'employees.html',
-  providers: [ EmployeesService ]
+  providers: [EmployeesService]
 })
 export class EmployeesPage {
-  public employee:any;
+  searchTerm: string = '';
+  employee: Array<{ name: { first: string, last: string }, picture: { thumbnail: string } }>
+  list: Array<{ name: { first: string, last: string }, picture: { thumbnail: string } }>
 
   constructor(
     public employeesService: EmployeesService,
-    public navCtrl: NavController, 
+    public navCtrl: NavController,
     public navParams: NavParams) {
-      this.loadEmployees();
-    }
-  
+    this.loadEmployees();
+  }
+
+/**LOAD LIST EMPLOYEES FROM API */
   loadEmployees() {
     this.employeesService.load()
       .then(data => {
         this.employee = data;
+        this.list = this.employee;
       })
   }
+
+/**SEARCH */
+  filterItems(searchTerm) {
+    return this.list.filter((employee) => {
+      return employee.name.first.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1;
+    });
+  }
+
+  setFilteredItems() {
+    if (this.searchTerm != '') {
+      this.employee = this.filterItems(this.searchTerm);
+    } else {
+      this.employee = this.list;
+    }
+  }
+
 }

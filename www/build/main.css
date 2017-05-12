@@ -19682,6 +19682,25 @@ page-item-details .style-button-details {
   margin-top: 495px;
 }
 
+page-item-details .style-laptop {
+  background-color: white;
+  color: black;
+  font-size: 90px;
+  margin-left: 18px;
+}
+
+page-item-details button {
+  border: 0;
+  font-family: inherit;
+  font-style: inherit;
+  font-variant: inherit;
+  line-height: 1;
+  text-transform: none;
+  cursor: pointer;
+  -webkit-appearance: button;
+  background-color: white;
+}
+
 page-list .button-style {
   float: right;
   background-color: white;

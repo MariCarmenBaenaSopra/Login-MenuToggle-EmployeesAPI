@@ -37,8 +37,9 @@ export var EmployeesService = (function () {
     };
     EmployeesService = __decorate([
         Injectable(), 
-        __metadata('design:paramtypes', [Http])
+        __metadata('design:paramtypes', [(typeof (_a = typeof Http !== 'undefined' && Http) === 'function' && _a) || Object])
     ], EmployeesService);
     return EmployeesService;
+    var _a;
 }());
 //# sourceMappingURL=employees-service.js.map

@@ -20,9 +20,11 @@ export var ItemDetailsPage = (function () {
     ItemDetailsPage.prototype.component = function () {
         this.navCtrl.setRoot(ComponentPage);
     };
+    ItemDetailsPage.prototype.seat = function () {
+    };
     ItemDetailsPage = __decorate([
         Component({
-            selector: 'page-item-details',template:/*ion-inline-start:"/home/maricarmensopra/Escritorio/ionic2/login+menu+employeesAPI/src/pages/item-details/item-details.html"*/'<ion-header>\n  <ion-navbar>\n    <button menuToggle *ngIf="!selectedItem" class="button-style">\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Rooms Details</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <h3 text-center *ngIf="selectedItem">\n    {{selectedItem.title}}\n    <ion-icon [name]="selectedItem.icon"></ion-icon>\n  </h3>\n  <h4 text-center *ngIf="selectedItem">\n    You navigated here from <b>{{selectedItem.title}}</b>\n  </h4>\n\n  <button class="style-button-details" (click)="component()"> \n    <ion-icon name="md-body"></ion-icon>\n  </button>\n</ion-content>\n'/*ion-inline-end:"/home/maricarmensopra/Escritorio/ionic2/login+menu+employeesAPI/src/pages/item-details/item-details.html"*/
+            selector: 'page-item-details',template:/*ion-inline-start:"/home/maricarmensopra/Escritorio/ionic2/login+menu+employeesAPI/src/pages/item-details/item-details.html"*/'<ion-header>\n  <ion-navbar>\n    <button menuToggle *ngIf="!selectedItem" class="button-style">\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Rooms Details</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <h3 text-center *ngIf="selectedItem">\n    {{selectedItem.title}}\n    <ion-icon [name]="selectedItem.icon"></ion-icon>\n  </h3>\n  <!--<h4 text-center *ngIf="selectedItem">\n    You navigated here from <b>{{selectedItem.title}}</b>\n  </h4>-->\n  <button (click)="seat()"> \n    <ion-icon name="md-laptop" class="style-laptop"></ion-icon>\n    <ion-icon name="md-laptop" class="style-laptop"></ion-icon>\n    <ion-icon name="md-laptop" class="style-laptop"></ion-icon>\n  </button>\n  <button class="style-button-details" (click)="component()"> \n    <ion-icon name="md-body"></ion-icon>\n  </button>\n</ion-content>\n'/*ion-inline-end:"/home/maricarmensopra/Escritorio/ionic2/login+menu+employeesAPI/src/pages/item-details/item-details.html"*/
         }), 
         __metadata('design:paramtypes', [NavController, NavParams])
     ], ItemDetailsPage);
